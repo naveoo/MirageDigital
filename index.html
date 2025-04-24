@@ -42,13 +42,13 @@
     <div id="content">
         <section id="title">
             <h1>MIRAGE DIGITAL</h1>
-            <a href="">
+            <a href="#home">
                 <img src="assets/icons/down.png" alt="En Bas">
             </a>
         </section>
         <div id="navbar"></div>
         <section>
-            <h1>ACCEUIL</h1>
+            <h1 id="home">ACCEUIL</h1>
             <p>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             </p>
@@ -57,6 +57,14 @@
     <footer></footer>
     <script>
         let isClockwise = true;
+        let isDarkMode = false;
+
+        const backgroundLightMode = "#DEBAC0";
+        const backgroundDarkMode = "#2b2d42";
+        const fontLightMode = "#D0CDC5";
+        const fontDarkMode = "#2F323A";
+        const navbarLightMode = "#77567A";
+        const navbarDarkMode = "#88A985"
 
         fetch("/pages/components/header.html")
             .then(response => response.text())
@@ -68,8 +76,18 @@
                 themeButton.addEventListener("click", function() {
                     if (themeImage.src.includes("moon.png")) {
                         themeImage.src = "/assets/icons/sun.png";
+                        document.documentElement.style.setProperty('--background-color', backgroundDarkMode);
+                        document.documentElement.style.setProperty('--main-font-color', fontDarkMode);
+                        document.documentElement.style.setProperty('--secondary-font-color', fontLightMode);
+                        document.documentElement.style.setProperty('--navbar-color', navbarDarkMode);
+                        isDarkMode = true;
                     } else {
                         themeImage.src = "/assets/icons/moon.png";
+                        document.documentElement.style.setProperty('--background-color', backgroundLightMode);
+                        document.documentElement.style.setProperty('--main-font-color', fontLightMode);
+                        document.documentElement.style.setProperty('--secondary-font-color', fontDarkMode);
+                        document.documentElement.style.setProperty('--navbar-color', navbarLightMode);
+                        isDarkMode = false;
                     }
                     
                     themeImage.classList.remove("rotate-animation-cw");
@@ -82,6 +100,7 @@
                     } else {
                         themeImage.classList.add("rotate-animation-ccw");
                     }
+                    
                     isClockwise = !isClockwise;
                 });
             });
