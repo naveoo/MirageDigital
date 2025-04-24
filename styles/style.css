@@ -85,8 +85,11 @@ body {
 #theme-image {
     transition: none;
 }
-.rotate-animation {
-    transform: rotate(360deg);
+#change-theme {
+    transition: all 0.3s;
+}
+#change-theme:hover {
+    transform: rotate(-20deg);
 }
 
 #navbar-branding {
@@ -151,11 +154,22 @@ body {
     animation: upAndDown 1s infinite ease-in-out;
     animation-play-state: running;
 
+    border-radius: 100px;
     transition: border-radius 0.3s;
 }
 #title a img:hover {
-    border-radius: 100px;
+    border-radius: 0px;
     animation-play-state: paused;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#pricing h3 {
+    text-align: center;
+    font-style: italic;
 }
 
 #cards {
@@ -230,6 +244,7 @@ body {
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
 
 .card:hover .contact-btn {
