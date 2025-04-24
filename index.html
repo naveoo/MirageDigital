@@ -80,15 +80,43 @@
         </section>
         <section id="contact">
             <h1>CONTACT</h1>
-            <div>
+            <h2>Un projet ? Une question ? Contactez nous ici !</h2>
                 <ul>
-                    <li>MAIL : <a href="mailto:wrenixa.music@gmail.com">miragedigital.contact@gmail.com</a></li>
-                    <li>WhatsApp : <a href="tel:+33624850323">+33 6 24 85 03 23</a></li>
+                    <li>MAIL : <a href="mailto:miragedigital.contact@gmail.com">miragedigital.contact@gmail.com</a></li>
+                    <li>WhatsApp : <a href="tel:+33624850323">(+33) 6 24 85 03 23</a></li>
                 </ul>
-            </div>
         </section>
     </div>
-    <footer></footer>
+    <div class="legals-mentions">
+        <h1>MENTIONS LÉGALES</h1>
+        <p><strong>Éditeur : </strong> Mirage Digital</p>
+        <p><strong>Contact : </strong> miragedigital.contact@gmail.com</p>
+        <p><strong>Hébergeur : </strong>GitHub Pages</p>
+    </div>
+    <footer id="footer">
+        <div class="contact">
+            <p>Email : <a href="mailto:miragedigital.contact@gmail.com">miragedigital.contact@gmail.com</a></p>
+            <p>Téléphone : <a href="tel:+33624850323">(+33) 6 24 85 03 23</a></p>
+            <div class="social-links">
+                <a href="https://facebook.com">Facebook</a>
+                <a href="https://linkedin.com">LinkedIn</a>
+                <a href="https://instagram.com">Instagram</a>
+            </div>
+        </div>
+        <div class="quick-links">
+            <a href="#home">Accueil</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="legal-mentions">
+            <p>© 2025 Mirage Digital. Tous droits réservés.</p>
+            <p><a href="#legals-mentions" onclick="document.querySelector('.legals-mentions').classList.add('visible');">Mentions légales</a></p>
+        </div>
+        <div class="back-to-top">
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Haut de page</button>
+        </div>
+    </footer>
     <script>
         let isClockwise = true;
         let isDarkMode = false;

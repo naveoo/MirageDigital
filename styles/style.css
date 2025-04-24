@@ -258,3 +258,88 @@ section h1 {
     background-color: var(--french-mauve);
     color: #fff;
 }
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--amaranth-pink);
+    padding: 5%;
+
+}
+#contact ul {
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: var(--navbar-color);
+    padding: 20px;
+    color: #fff; 
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0; 
+    line-height: 1.5;
+}
+
+footer a {
+    color: #fff; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--amaranth-pink);
+}
+
+footer .contact, footer .quick-links, footer .legal {
+    margin: 15px 0;
+}
+
+footer .social-links a {
+    margin-right: 10px;
+}
+
+footer .back-to-top button {
+    background-color: var(--amaranth-pink);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+footer .back-to-top button:hover {
+    background-color: #fff;
+    color: var(--amaranth-pink);
+}
+
+.legals-mentions {
+    height: 0;
+    overflow: hidden;
+    background-color: var(--amaranth-pink);
+    text-align: center;
+    transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.legals-mentions h1 {
+    margin: 0;
+}
+
+.legals-mentions p {
+    margin: 0;
+    padding: 12px;
+}
+
+.visible {
+    height: auto;
+    padding: 20px;
+}
