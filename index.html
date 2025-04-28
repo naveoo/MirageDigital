@@ -31,16 +31,19 @@
             <h1>ACCUEIL</h1>
             <ul>
                 <li>
-                    <h2>Qui sommes nous ?</h2>
-                    Nous sommes un groupe...
+                    <h2>Bienvenue</h2>
+                    Chez Mirage Digital, nous ne nous contentons pas de créer des sites internet, nous donnons vie à vos idées. Passionnés par le numérique et animés par une volontée d'aider à bâtir le web d'aujourd'hui, nous avons pour mission de concevoir des solutions modernes, élégantes et accessibles.
                 </li>
                 <li>
-                    <h2>Comment sommes nous ?</h2>
-                    Nous sommes...
+                    <h2>Pourquoi nous ?</h2>
+                    <strong>Flexibilité :</strong> Chaque client est unique, et chaque projet mérite une attention sur-mesure. <br>
+                    <strong>Prix compétitifs :</strong> Des solutions professionnelles à des tarifs accessibles. <br>
+                    <strong>Créativité :</strong> Notre perspective jeune et dynamique fait de chaque projet une expérience originale.
                 </li>
                 <li>
-                    <h2>Pourquoi sommes nous ?</h2>
-                    Parce que nous...
+                    <h2>Prêts à transformer vos idées en réalité ?</h2>
+                    Chez Mirage Digital, chaque projet est un défi que nous relevons avec passion et innovation. Contactez-nous dès aujourd'hui pour bâtir votre avenir numérique ensemble. <br>
+                    <button class="contact-btn" onclick="window.location.href = '#contact';">Nous contacter</button></a>
                 </li>
             </ul>
         </section>
@@ -141,7 +144,11 @@
         const fontLightMode = "#D0CDC5";
         const fontDarkMode = "#2F323A";
         const navbarLightMode = "#77567A";
-        const navbarDarkMode = "#88A985"
+        const navbarDarkMode = "#88A985";
+        const sectionLightMode = "#E39EC1";
+        const sectionDarkMode = "#1C613E";
+        const cardLightMode = "#C47AC0";
+        const cardDarkMode = "#3B853F";
                 
         const themeButton = document.getElementById("change-theme");
         const themeImage = document.getElementById("theme-image");
@@ -153,6 +160,8 @@
                 document.documentElement.style.setProperty('--main-font-color', fontDarkMode);
                 document.documentElement.style.setProperty('--secondary-font-color', fontLightMode);
                 document.documentElement.style.setProperty('--navbar-color', navbarDarkMode);
+                document.documentElement.style.setProperty('--section-color', sectionDarkMode);
+                document.documentElement.style.setProperty('--card-color', cardDarkMode);
                 isDarkMode = true;
             } else {
                 themeImage.src = "assets/icons/moon.png";
@@ -160,6 +169,8 @@
                 document.documentElement.style.setProperty('--main-font-color', fontLightMode);
                 document.documentElement.style.setProperty('--secondary-font-color', fontDarkMode);
                 document.documentElement.style.setProperty('--navbar-color', navbarLightMode);
+                document.documentElement.style.setProperty('--section-color', sectionLightMode);
+                document.documentElement.style.setProperty('--card-color', cardLightMode);
                 isDarkMode = false;
             }
                     

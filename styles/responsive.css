@@ -5,12 +5,11 @@
     --main-font-color : #D0CDC5;
     --secondary-font-color : #2F323A;
     --navbar-color : #77567A;
-    --french-mauve : #C47AC0;
-    --amaranth-pink : #E39EC1;
+    --card-color : #C47AC0;
+    --section-color : #E39EC1;
     --background-color : #DEBAC0;
 }
 
-/* Keyframes & Animations */
 @keyframes upAndDown { 0%,100% {transform: translateY(0);} 50% {transform: translateY(-100px);} }
 @keyframes rotate-cw { 0% {
     transform: rotate(0deg);
@@ -28,7 +27,6 @@
 .rotate-animation-cw { animation: rotate-cw 0.5s ease forwards; }
 .rotate-animation-ccw { animation: rotate-ccw 0.5s ease forwards; }
 
-/* Page */
 * { scroll-behavior: smooth; scroll-margin: 120px; }
 body {
     margin: 0; padding: 0;
@@ -38,7 +36,6 @@ body {
     transition: all 0.5s ease;
 }
 
-/* Navbar */
 #navbar { position: sticky; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center;
     background-color: var(--navbar-color); z-index: 10; box-shadow: 0 10px 10px rgba(0,0,0,0.1);
 }
@@ -54,7 +51,6 @@ body {
 #change-theme { transition: transform 0.3s;}
 #change-theme:hover { transform: rotate(-20deg); }
 
-/* Title */
 #title { height: 100vh; background: url("../assets/images/background-image-2.png") center/cover no-repeat; position: relative; }
 #title h1 { margin: 0; padding-top: 40vh; text-align: center; font-size: 10em; color: var(--secondary-font-color); transition: all 0.5s ease; }
 #title a img { position: absolute; right: 20px; bottom: 20px; width: 130px;
@@ -62,25 +58,31 @@ body {
 }
 #title a img:hover { border-radius: 0; animation-play-state: paused; }
 
-/* Sections */
 section h1 { text-align: center; font-size: 2.5em; }
+
 #home h2 { margin: 3%; }
 #home ul { list-style: none; }
 #home li { margin: 3%; }
+#home button {
+    display: block;
+    margin: 5% auto;
+    text-align: center; background: #fff; color: var(--card-color); border: none; padding: 10px 20px;
+    border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.2); transition: all 0.3s;
+}
+#home button:hover { background-color: var(--card-color); color: #fff; }
 
-/* Portfolio */
-#portfolio { background-color: var(--amaranth-pink); text-align: center; padding: 4%; }
+#portfolio { background-color: var(--section-color); text-align: center; padding: 4%; }
 #portfolio img { width: 500px; margin: 2%; border-radius: 20px; filter: brightness(0.7); transition: all 0.3s; }
 #portfolio img:hover { filter: brightness(1.5); transform: translateY(-10px); box-shadow: 0 12px 15px rgba(0,0,0,0.2); }
 
-/* Pricing Cards */
 #pricing h3 { text-align: center; font-style: italic; }
 #cards { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
 .card {
-    background-color: var(--french-mauve);
+    background-color: var(--card-color);
     width: 300px; margin: 4%; padding: 20px; text-align: center;
     border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    position: relative; transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 .card:hover { transform: translateY(-10px); box-shadow: 0 12px 15px rgba(0,0,0,0.2); }
 .card img { width: 100%; border-radius: 10px; margin-bottom: 15px; transition: all 0.3s; }
@@ -91,19 +93,17 @@ section h1 { text-align: center; font-size: 2.5em; }
 .card h2.price { font-size: 18px; margin-top: 15px; transition: opacity 0.3s; }
 .card .contact-btn {
     display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    background: #fff; color: var(--french-mauve); border: none; padding: 10px 20px;
+    background: #fff; color: var(--card-color); border: none; padding: 10px 20px;
     border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer;
     box-shadow: 0 6px 6px rgba(0,0,0,0.2); transition: all 0.3s;
 }
 .card:hover .contact-btn { display: block; }
-.card .contact-btn:hover { background-color: var(--french-mauve); color: #fff; }
+.card .contact-btn:hover { background-color: var(--card-color); color: #fff; }
 
-/* Contact Section */
 #contact { display: flex; flex-direction: column; align-items: center; justify-content: center;
-    background-color: var(--amaranth-pink); padding: 5%; }
+    background-color: var(--section-color); padding: 5%; }
 #contact ul { font-size: 1.2em; list-style: none; padding: 0; }
 
-/* Footer */
 footer {
     background-color: var(--navbar-color); color: #fff; font-size: 14px;
     display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
@@ -120,14 +120,10 @@ footer .back-to-top button {
 }
 footer .back-to-top button:hover { background: #fff; color: var(--french-mauve); }
 
-.legals-mentions { height: 0; overflow: hidden; background: var(--amaranth-pink);
+.legals-mentions { height: 0; overflow: hidden; background: var(--section-color);
     text-align: center; transition: height 0.3s, padding 0.3s;
 }
 .legals-mentions.visible { height: auto; padding: 20px; }
-
-/* ---------------------------------- */
-/*         Responsive Breakpoints     */
-/* ---------------------------------- */
 
 @media (max-width: 1200px) {
     #title h1 { font-size: 8em; }
