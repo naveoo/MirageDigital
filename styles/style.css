@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
 :root {
     --main-font-color : #D0CDC5;
     --secondary-font-color : #2F323A;
@@ -12,14 +14,6 @@
     }
     50% {
         transform: translateY(-100px);
-    }
-}
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
     }
 }
 @keyframes rotate-cw {
@@ -57,6 +51,7 @@ body {
     margin: 0;
     padding: 0;
     
+    font-family: "Cal Sans", sans-serif;
     color: var(--secondary-font-color);
     background-color: var(--background-color);
     transition: all 0.5s ease;
@@ -166,6 +161,23 @@ body {
 section h1 {
     text-align: center;
     font-size: 2.5em;
+}
+
+#portfolio {
+    background-color: var(--amaranth-pink);
+    text-align: center;
+}
+#portfolio img {
+    width: 500px;
+    margin: 2%;
+    border-radius: 20px;
+    filter: brightness(0.7);
+    transition: all 0.3s;
+}
+#portfolio img:hover {
+    filter: brightness(1.5);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2);
 }
 
 #pricing h3 {
