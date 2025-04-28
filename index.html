@@ -50,7 +50,7 @@
         .card ul { list-style: none; padding: 0; margin: 0; }
         .card ul li { margin: 5px 0; font-size: 16px; color: #fff; }
         .card h2.price { font-size: 18px; margin-top: 15px; transition: opacity 0.3s; }
-        .card .contact-btn { display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; color: var(--card-color); border: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; box-shadow: 0 6px 6px rgba(0,0,0,0.2); transition: all 0.3s; }
+        .card .contact-btn { display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; color: var(--card-color); border: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; box-shadow: 0 6px 6px rgba(0,0,0,0.2); text-decoration: none; transition: all 0.3s; }
         .card:hover .contact-btn { display: block; }
         .card .contact-btn:hover { background-color: var(--card-color); color: #fff; }
         #contact { display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: var(--section-color); padding: 5%; }
@@ -111,19 +111,29 @@
             <ul>
                 <li>
                     <h2>Bienvenue</h2>
-                    Chez Mirage Digital, nous ne nous contentons pas de créer des sites internet, nous donnons vie à vos idées. Passionnés par le numérique et animés par une volontée d'aider à bâtir le web d'aujourd'hui, nous avons pour mission de concevoir des solutions modernes, élégantes et accessibles.
+                    Chez Mirage Digital, nous ne nous contentons pas de créer des sites internet, nous donnons vie à vos idées. Passionnés par le numérique et animés par une volonté de bâtir le web de demain, nous concevons des solutions modernes, élégantes et accessibles.
                 </li>
                 <li>
                     <h2>Pourquoi nous ?</h2>
-                    <strong>Flexibilité :</strong> Chaque client est unique, et chaque projet mérite une attention sur-mesure. <br>
-                    <strong>Prix compétitifs :</strong> Des solutions professionnelles à des tarifs accessibles. <br>
-                    <strong>Créativité :</strong> Notre perspective jeune et dynamique fait de chaque projet une expérience originale.
+                    <strong>Flexibilité :</strong> Chaque client est unique, chaque projet bénéficie d'une approche sur-mesure. <br>
+                    <strong>Prix compétitifs :</strong> Des solutions professionnelles accessibles à tous les budgets. <br>
+                    <strong>Créativité :</strong> Une vision jeune et dynamique pour rendre chaque projet original et impactant.
+                </li>
+                <li>
+                    <h2>Nos services</h2>
+                    Du CV en ligne au site e-commerce complet, Mirage Digital vous propose :
+                    <ul>
+                        <li>Sites vitrines modernes</li>
+                        <li>Portfolios professionnels</li>
+                        <li>Boutiques en ligne sur-mesure</li>
+                        <li>Landing pages et minisites promotionnels</li>
+                    </ul>
                 </li>
                 <li>
                     <h2>Prêts à transformer vos idées en réalité ?</h2>
-                    Chez Mirage Digital, chaque projet est un défi que nous relevons avec passion et innovation. Contactez-nous dès aujourd'hui pour bâtir votre avenir numérique ensemble. <br>
-                    <button class="contact-btn" onclick="window.location.href = '#contact';">Nous contacter</button></a>
-                </li>
+                    Chez Mirage Digital, chaque projet est un défi relevé avec passion et innovation. Contactez-nous dès aujourd'hui pour bâtir ensemble votre avenir numérique. <br>
+                    <button class="contact-btn" onclick="window.location.href = '#contact';">Nous contacter</button>
+                </li>                
             </ul>
         </section>
         <section id="portfolio">
@@ -137,43 +147,43 @@
             </div>
         </section>
         <section id="pricing">
-            <h1>TARIFS</h1>
+            <h1>Services</h1>
             <div id="cards">
                 <div class="card">
                     <img src="assets/images/little.jpg" alt="">
-                    <h1>Offre 1</h1>
+                    <h1>Essentiel Web</h1>
                     <ul>
-                        <li>Description</li>
-                        <li>De</li>
-                        <li>L'offre</li>
+                        <li>Site vitrine 1 à 5 pages</li>
+                        <li>Design moderne et responsive</li>
+                        <li>Formulaire de contact inclus</li>
                     </ul>
-                    <h2 class="price">XXX €</h2>
+                    <h2 class="price">À partir de 400 €</h2>
                     <a href="#contact" class="contact-btn">Nous contacter</a>
                 </div>
                 <div class="card">
                     <img src="assets/images/medium.jpg" alt="">
-                    <h1>Offre 2</h1>
+                    <h1>Présence Pro</h1>
                     <ul>
-                        <li>Description</li>
-                        <li>De</li>
-                        <li>L'offre</li>
+                        <li>Site professionnel complet</li>
+                        <li>Optimisation SEO de base</li>
+                        <li>Blog ou actualités intégrées</li>
                     </ul>
-                    <h2 class="price">XXX €</h2>
+                    <h2 class="price">À partir de 700 €</h2>
                     <a href="#contact" class="contact-btn">Nous contacter</a>
                 </div>
                 <div class="card">
                     <img src="assets/images/big.jpg" alt="">
-                    <h1>Offre 3</h1>
+                    <h1>Boutique Express</h1>
                     <ul>
-                        <li>Description</li>
-                        <li>De</li>
-                        <li>L'offre</li>
+                        <li>Site e-commerce prêt à vendre</li>
+                        <li>Paiement en ligne sécurisé</li>
+                        <li>Gestion produits et commandes</li>
                     </ul>
-                    <h2 class="price">XXX €</h2>
+                    <h2 class="price">À partir de 1 200 €</h2>
                     <a href="#contact" class="contact-btn">Nous contacter</a>
                 </div>
-            </div>
-            <h3>Prix fournis à titre indicatif, ces derniers sont succeptibles de varier selon les besoins.</h3>
+            </div>            
+            <h3>Prix fournis à titre indicatif, ces derniers sont susceptibles de varier selon les besoins.</h3>
         </section>
         <section id="contact">
             <h1>CONTACT</h1>
@@ -197,7 +207,7 @@
         </div>
         <div class="quick-links">
             <a href="#home">Accueil</a>
-            <a href="#services">Services</a>
+            <a href="#pricing">Services</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
         </div>
